@@ -67,8 +67,15 @@ public class ImageGridFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    // allow to show image in grid
     private ArrayList extractFiles() {
         final ArrayList imageItems = new ArrayList();
+        File[] filteredFiles = FileUtilities.listFiles(this.getActivity()); // this.activity == context
+        for (File filteredFile: filteredFiles) {
+            Bitmap bitmap = BitmapFactory.decodeFile(filteredFile.getAbsolutePath());
+            ImageGridItem item = new ImageGridItem(bitmap, filteredFile.getName(), filteredFile.getAbsolutePath());
+            imageItems.add(item);
+        }
         return imageItems;
     }
 
