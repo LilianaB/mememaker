@@ -30,6 +30,8 @@ import com.teamtreehouse.mememaker.ui.activities.CreateMemeActivity;
 import com.teamtreehouse.mememaker.ui.activities.MemeSettingsActivity;
 import com.teamtreehouse.mememaker.utils.FileUtilities;
 
+import java.util.ArrayList;
+
 
 public class MemeItemFragment extends ListFragment {
 
@@ -85,7 +87,9 @@ public class MemeItemFragment extends ListFragment {
     @Override
     public void onResume() {
         super.onResume();
-        MemeDataSource datasource = new MemeDataSource(this.getActivity());
+        MemeDataSource dataSource = new MemeDataSource(this.getActivity());
+        ArrayList<Meme> memes = dataSource.read();
+        setListAdapter(new MemeItemListAdapter(getActivity(), memes));
     }
 
     @Override
