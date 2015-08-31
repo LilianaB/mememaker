@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/liliana/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v13/19.0.1/support-v13-19.0.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="a4d00c1fa39c05a544fc2221af40bbf76e07c7df">
+        <dex dex="/Users/liliana/Documents/android/mememaker/app/build/intermediates/pre-dexed/debug/support-v13-19.0.1-d1186640e740f50dca06f28cc3dbb4b6bc35ccf3.jar" />
+    </item>
+    <item
+        jar="/Users/liliana/Documents/android/mememaker/app/libs/commons-io-2.4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/Users/liliana/Documents/android/mememaker/app/build/intermediates/pre-dexed/debug/commons-io-2.4-a091c9f0b762c2515499df3378fceb5cf68cd178.jar" />
+    </item>
+    <item
+        jar="/Users/liliana/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.0.1/support-v4-19.0.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="587da9a481ffd341d2fa091704489b89845ddacd">
+        <dex dex="/Users/liliana/Documents/android/mememaker/app/build/intermediates/pre-dexed/debug/support-v4-19.0.1-76315e19ae5a36a70dd60e72bbc5021d847bc5c1.jar" />
+    </item>
+
+</items>
