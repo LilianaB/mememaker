@@ -25,7 +25,7 @@ import java.io.OutputStream;
 public class FileUtilities {
 
     public static void saveAssetImage(Context context, String assetName) {
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         File fileToWrite = new File(fileDirectory, assetName);//give us file into file directory named assetName
 
         AssetManager assetManager = context.getAssets();
@@ -43,6 +43,33 @@ public class FileUtilities {
         //second parameter make file readable writable outside app
     }
 
+    public static File getFileDirectory(Context context) {
+        String storageType = StorageType.INTERNAL;
+        if (storageType.equals(StorageType.INTERNAL)) {
+            return context.getFilesDir(); //specifically internal storage
+        } else {
+            if (isExternalStorageAvailable()) {
+                if (storageType.equals(StorageType.PRIVATE_EXTERNAL)) {
+                    return context.getExternalFilesDir(null);
+                } else {
+                    return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                }
+
+            } else {
+                return context.getFilesDir(); //specifically internal storage
+            }
+        }
+
+    }
+
+    public static boolean isExternalStorageAvailable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
     //standard method to copy files
     private static void copyFile(InputStream in, OutputStream out) throws IOException {
         byte[] buffer = new byte[1024];
@@ -53,7 +80,7 @@ public class FileUtilities {
     }
 
    public static File[] listFiles(Context context) {
-        File fileDirectory = context.getFilesDir(); // only for jpg
+        File fileDirectory = getFileDirectory(context); // only for jpg
         File[] filteredFiles = fileDirectory.listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
@@ -87,7 +114,7 @@ public class FileUtilities {
 
 
     public static void saveImage(Context context, Bitmap bitmap, String name) {
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         File fileToWrite = new File(fileDirectory, name);
 
         try {
