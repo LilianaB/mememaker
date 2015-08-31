@@ -65,25 +65,27 @@ public final class R {
         public static final int action_save=0x7f080001;
         public static final int action_settings=0x7f080002;
         public static final int add_meme_action=0x7f080003;
-        public static final int app_name=0x7f080004;
-        public static final int delete_action=0x7f080005;
-        public static final int dialog_confirm=0x7f080006;
-        public static final int dialog_message_delete_file=0x7f080007;
-        public static final int dialog_message_delete_meme=0x7f080008;
-        public static final int edit_action=0x7f080009;
-        public static final int general_error=0x7f08000a;
-        public static final int hello_blank_fragment=0x7f08000b;
-        public static final int images_fragment_title=0x7f08000c;
-        public static final int import_image=0x7f08000d;
-        public static final int memes_fragment_title=0x7f08000e;
-        public static final int send_to=0x7f08000f;
-        public static final int settings_action=0x7f080010;
-        public static final int share_action=0x7f080011;
-        public static final int title_activity_create_meme=0x7f080012;
-        public static final int title_internal_storage_type=0x7f080013;
-        public static final int title_private_external_storage_type=0x7f080014;
-        public static final int title_public_external_storage_type=0x7f080015;
-        public static final int title_storage_type=0x7f080016;
+        public static final int android_default_value=0x7f080004;
+        public static final int app_name=0x7f080005;
+        public static final int delete_action=0x7f080006;
+        public static final int dialog_confirm=0x7f080007;
+        public static final int dialog_message_delete_file=0x7f080008;
+        public static final int dialog_message_delete_meme=0x7f080009;
+        public static final int edit_action=0x7f08000a;
+        public static final int general_error=0x7f08000b;
+        public static final int hello_blank_fragment=0x7f08000c;
+        public static final int images_fragment_title=0x7f08000d;
+        public static final int import_image=0x7f08000e;
+        public static final int memes_fragment_title=0x7f08000f;
+        public static final int send_to=0x7f080010;
+        public static final int settings_action=0x7f080011;
+        public static final int share_action=0x7f080012;
+        public static final int storage_key=0x7f080013;
+        public static final int title_activity_create_meme=0x7f080014;
+        public static final int title_internal_storage_type=0x7f080015;
+        public static final int title_private_external_storage_type=0x7f080016;
+        public static final int title_public_external_storage_type=0x7f080017;
+        public static final int title_storage_type=0x7f080018;
     }
     public static final class style {
         /**  Customize your theme here. 

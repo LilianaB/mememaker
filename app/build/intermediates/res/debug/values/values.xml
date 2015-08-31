@@ -40,6 +40,7 @@
     <string name="action_save">Save</string>
     <string name="action_settings">Settings</string>
     <string name="add_meme_action">Add Meme</string>
+    <string name="android_default_value">INTERNAL</string>
     <string name="app_name">Meme Maker</string>
     <string name="delete_action">Delete Image</string>
     <string name="dialog_confirm">Please confirm</string>
@@ -54,6 +55,7 @@
     <string name="send_to">Send To</string>
     <string name="settings_action">Settings</string>
     <string name="share_action">Share</string>
+    <string name="storage_key">STORAGE</string>
     <string name="title_activity_create_meme">Create Your Meme</string>
     <string name="title_internal_storage_type">Internal Storage</string>
     <string name="title_private_external_storage_type">Private External</string>

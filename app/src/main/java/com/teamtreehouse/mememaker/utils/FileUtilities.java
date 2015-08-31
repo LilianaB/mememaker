@@ -8,6 +8,7 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.teamtreehouse.mememaker.MemeMakerApplication;
 import com.teamtreehouse.mememaker.MemeMakerApplicationSettings;
 
 import java.io.File;
@@ -44,7 +45,8 @@ public class FileUtilities {
     }
 
     public static File getFileDirectory(Context context) {
-        String storageType = StorageType.INTERNAL;
+        MemeMakerApplicationSettings settings = new MemeMakerApplicationSettings(context);
+        String storageType = settings.getStoragePreferences();
         if (storageType.equals(StorageType.INTERNAL)) {
             return context.getFilesDir(); //specifically internal storage
         } else {
