@@ -31,7 +31,7 @@ public class FileUtilities {
         AssetManager assetManager = context.getAssets();
         try {
             InputStream in = assetManager.open(assetName); // input for reading file
-            FileOutputStream out = new FileOutputStream(fileDirectory);
+            FileOutputStream out = new FileOutputStream(fileToWrite);
             copyFile(in, out);
             in.close();
             out.close();
@@ -52,7 +52,7 @@ public class FileUtilities {
         }
     }
 
-    public static File[] listFiles(Context context) {
+   public static File[] listFiles(Context context) {
         File fileDirectory = context.getFilesDir(); // only for jpg
         File[] filteredFiles = fileDirectory.listFiles(new FileFilter() {
             @Override

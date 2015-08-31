@@ -71,12 +71,14 @@ public class ImageGridFragment extends Fragment {
     private ArrayList extractFiles() {
         final ArrayList imageItems = new ArrayList();
         File[] filteredFiles = FileUtilities.listFiles(this.getActivity()); // this.activity == context
+        //the magic here is showing files into view
         for (File filteredFile: filteredFiles) {
             Bitmap bitmap = BitmapFactory.decodeFile(filteredFile.getAbsolutePath());
             ImageGridItem item = new ImageGridItem(bitmap, filteredFile.getName(), filteredFile.getAbsolutePath());
             imageItems.add(item);
         }
         return imageItems;
+
     }
 
     private void resetGridAdapter() {
