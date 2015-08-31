@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.teamtreehouse.mememaker.R;
 import com.teamtreehouse.mememaker.adapters.MemeItemListAdapter;
+import com.teamtreehouse.mememaker.database.MemeDataSource;
 import com.teamtreehouse.mememaker.models.Meme;
 import com.teamtreehouse.mememaker.models.MemeAnnotation;
 import com.teamtreehouse.mememaker.ui.activities.CreateMemeActivity;
@@ -79,6 +80,12 @@ public class MemeItemFragment extends ListFragment {
                 return true;
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MemeDataSource datasource = new MemeDataSource(this.getActivity());
     }
 
     @Override

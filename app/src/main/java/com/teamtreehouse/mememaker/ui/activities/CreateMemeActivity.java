@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import com.teamtreehouse.mememaker.R;
+import com.teamtreehouse.mememaker.database.MemeDataSource;
 import com.teamtreehouse.mememaker.models.Meme;
 import com.teamtreehouse.mememaker.models.MemeAnnotation;
 import com.teamtreehouse.mememaker.ui.views.MemeImageView;
@@ -174,5 +175,8 @@ public class CreateMemeActivity extends Activity {
             MemeAnnotation annotation = mCurrentMeme.getAnnotations().get(i);
             annotation.setTitle(editText.getText().toString());
         }
+
+        MemeDataSource memeDataSource = new MemeDataSource(this);
+        memeDataSource.create(mCurrentMeme);
     }
 }

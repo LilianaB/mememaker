@@ -17,10 +17,11 @@ public class MemeSQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_MEME_ASSET = "ASSET";
     public static final String COLUMN_MEME_NAME = "NAME";
     private static String CREATE_MEMES =
-            "CREATE TABLE"+ MEMES_TABLE + "("+
-                    BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT)"+
-                    COLUMN_MEME_ASSET + "TEXT"+
-                    COLUMN_MEME_NAME + "TEXT);";
+            "CREATE TABLE " + MEMES_TABLE + "("
+                    + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    COLUMN_MEME_ASSET +" TEXT," +
+                    COLUMN_MEME_NAME + " TEXT)";
+
 
     //Meme Table Annotations functionality
     public static final String ANNOTATIONS_TABLE = "ANNOTATIONS";
